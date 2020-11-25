@@ -32,8 +32,7 @@ RUN rm -rf /usr/bin/java && \
 # hadoop
 RUN wget https://archive.apache.org/dist/hadoop/core/hadoop-3.1.1/hadoop-3.1.1.tar.gz && \
 	tar -xvzf hadoop-3.1.1.tar.gz -C /usr/local/ && \
-	cd /usr/local && ln -s ./hadoop-3.1.1 hadoop && \
-	rm hadoop-3.1.1.tar.gz
+	cd /usr/local && ln -s ./hadoop-3.1.1 hadoop
 
 # hadoop env
 ENV HADOOP_HOME /usr/local/hadoop
