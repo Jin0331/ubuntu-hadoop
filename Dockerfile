@@ -65,8 +65,6 @@ ADD core-site.xml $HADOOP_HOME/etc/hadoop/core-site.xml
 ADD mapred-site.xml $HADOOP_HOME/etc/hadoop/mapred-site.xml
 ADD yarn-site.xml $HADOOP_HOME/etc/hadoop/yarn-site.xml
 
-RUN $HADOOP_HOME/bin/hdfs namenode -format
-
 ADD ssh_config /root/.ssh/config
 RUN chmod 600 /root/.ssh/config && \
 	chown root:root /root/.ssh/config
